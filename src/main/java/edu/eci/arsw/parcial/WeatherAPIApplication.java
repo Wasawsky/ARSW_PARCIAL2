@@ -13,8 +13,8 @@ import org.springframework.context.annotation.ComponentScan;
  *
  * @author Michael B
  */
-@SpringBootApplication
-@ComponentScan(basePackages = {"edu.eci.arsw.cinema"})
+@SpringBootApplication(scanBasePackages={"edu.eci.arsw.parcial.services"})
+@ComponentScan(basePackages = {"edu.eci.arsw.parcial"})
 public class WeatherAPIApplication {
 
     public static void main(String[] args) {

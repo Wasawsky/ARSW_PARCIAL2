@@ -22,7 +22,6 @@ import edu.eci.arsw.parcial.model.Weather;
  * @author Michael B
  */
 @Service
-@Scope("prototype")
 public interface WeatherServices {
 
 	public Weather getWeatherCity(String city) throws ResourceNotFoundException;

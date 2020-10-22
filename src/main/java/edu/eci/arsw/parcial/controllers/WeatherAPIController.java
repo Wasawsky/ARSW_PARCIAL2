@@ -19,6 +19,7 @@ import com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import edu.eci.arsw.parcial.model.Weather;
@@ -30,11 +31,12 @@ import edu.eci.arsw.parcial.services.WeatherServices;
  */
 @RestController
 @RequestMapping(value = "/weather")
+@Service
 public class WeatherAPIController {
 
 
-    @Autowired
-    WeatherServices wthServices;
+    //@Autowired
+    //private WeatherServices wthServices;
 
     private ObjectMapper objectMapper = new ObjectMapper();
 
@@ -55,9 +57,9 @@ public class WeatherAPIController {
     public ResponseEntity<?> getWeather(@PathVariable String city){
         try {
             System.out.println(city);
-            String json = objectToJson(wthServices.getWeatherCity(city));
+            //String json = objectToJson(wthServices.getWeatherCity(city));
             //obtener datos que se enviarán a través del API
-            return new ResponseEntity<>(json,HttpStatus.ACCEPTED);
+            return new ResponseEntity<>("trabajando",HttpStatus.ACCEPTED);
         } catch (Exception ex) {
             Logger.getLogger(WeatherAPIController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>("HTTP 404 Not Found",HttpStatus.NOT_FOUND);
