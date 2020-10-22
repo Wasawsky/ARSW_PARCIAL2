@@ -19,6 +19,11 @@ var appWeather = (function () {
         console.log("check callback")
     };
 
+    var done = function (city) {
+        
+        
+        console.log("seteando ciudad"+city);
+    };
     
 
     return {
@@ -26,7 +31,12 @@ var appWeather = (function () {
 
         },
 
+        setCity: function (newCity) {
+            city = newCity;
+        },
+
         setWeatherCity: function (city) {
+            console.log("setapp")
             appWeather.setCity(city);
             REPOSITORY.getWeatherCity(city,callback);
         }

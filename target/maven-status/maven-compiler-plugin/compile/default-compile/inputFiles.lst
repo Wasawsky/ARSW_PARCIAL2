@@ -1,6 +1,8 @@
 C:\Users\mjbc_\Documents\Universidad\ARSW\PARCIAL\2\ARSW-WeatherTest-master\ARSW-WeatherTest-master\src\main\java\edu\eci\arsw\parcial\services\WeatherServices.java
 C:\Users\mjbc_\Documents\Universidad\ARSW\PARCIAL\2\ARSW-WeatherTest-master\ARSW-WeatherTest-master\src\main\java\edu\eci\arsw\parcial\controllers\WeatherAPIController.java
 C:\Users\mjbc_\Documents\Universidad\ARSW\PARCIAL\2\ARSW-WeatherTest-master\ARSW-WeatherTest-master\src\main\java\edu\eci\arsw\parcial\WeatherAPIApplication.java
+C:\Users\mjbc_\Documents\Universidad\ARSW\PARCIAL\2\ARSW-WeatherTest-master\ARSW-WeatherTest-master\src\main\java\edu\eci\arsw\parcial\model\Weather.java
 C:\Users\mjbc_\Documents\Universidad\ARSW\PARCIAL\2\ARSW-WeatherTest-master\ARSW-WeatherTest-master\src\main\java\edu\eci\arsw\parcial\controllers\ResourceNotFoundException.java
-C:\Users\mjbc_\Documents\Universidad\ARSW\PARCIAL\2\ARSW-WeatherTest-master\ARSW-WeatherTest-master\src\main\java\edu\eci\arsw\parcial\CinemaWebSocketConfig.java
-C:\Users\mjbc_\Documents\Universidad\ARSW\PARCIAL\2\ARSW-WeatherTest-master\ARSW-WeatherTest-master\src\main\java\edu\eci\arsw\parcial\controllers\STOMPMessagesHandler.java
+C:\Users\mjbc_\Documents\Universidad\ARSW\PARCIAL\2\ARSW-WeatherTest-master\ARSW-WeatherTest-master\src\main\java\edu\eci\arsw\parcial\Excepcion\WeatherExcepcion.java
+C:\Users\mjbc_\Documents\Universidad\ARSW\PARCIAL\2\ARSW-WeatherTest-master\ARSW-WeatherTest-master\src\main\java\edu\eci\arsw\parcial\services\impl\WeaterServicesImpl.java
+C:\Users\mjbc_\Documents\Universidad\ARSW\PARCIAL\2\ARSW-WeatherTest-master\ARSW-WeatherTest-master\src\main\java\edu\eci\arsw\parcial\services\http\HttpConnectionExample.java

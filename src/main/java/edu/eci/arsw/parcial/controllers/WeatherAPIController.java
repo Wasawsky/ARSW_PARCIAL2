@@ -21,48 +21,48 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import edu.eci.arsw.parcial.model.Weather;
+import edu.eci.arsw.parcial.services.WeatherServices;
+
 /**
  *
- * @author cristian
+ * @author Michael B
  */
 @RestController
 @RequestMapping(value = "/weather")
 public class WeatherAPIController {
 
 
+    @Autowired
+    WeatherServices wthServices;
+
     private ObjectMapper objectMapper = new ObjectMapper();
 
-    /*
     @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity<?> manejadorGetRecursoCinema(){
+    public ResponseEntity<?> getCity(){
         try {
-            System.out.println(objectToJson(cinemaServices.getAllCinemas()));
+            Weather wth2 = new Weather(0, "main", "description", "icon");
+            System.out.println(objectToJson(wth2));
             //obtener datos que se enviarán a través del API
-            return new ResponseEntity<>(objectToJson(cinemaServices.getAllCinemas()),HttpStatus.ACCEPTED);
+            return new ResponseEntity<>(objectToJson(wth2),HttpStatus.ACCEPTED);
         } catch (Exception ex) {
-            Logger.getLogger(CinemaAPIController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(WeatherAPIController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>("HTTP 404 Not Found",HttpStatus.NOT_FOUND);
         }
     }
 
-    @RequestMapping(value="/{name}", method = RequestMethod.POST)
-    public ResponseEntity<?> controladorNuevoCinema(@RequestBody String body, @PathVariable String name){
+    @RequestMapping(value="/{city}", method = RequestMethod.GET)
+    public ResponseEntity<?> getWeather(@PathVariable String city){
         try {
-            JsonNode root = objectMapper.readTree(body);
-            Cinema nuevo = objectMapper.readValue(body, Cinema.class);
-            if(!name.equals(nuevo.getName())){
-                return new ResponseEntity<>("HTTP 403 Forbidden",HttpStatus.FORBIDDEN);
-            }
-            cinemaServices.addNewCinema(nuevo);
-            return new ResponseEntity<>("HTTP 201 Created",HttpStatus.CREATED);
-        } catch (IOException ex){
-            Logger.getLogger(CinemaAPIController.class.getName()).log(Level.SEVERE, null, ex);
-            return new ResponseEntity<>("HTTP 400 Bad Request",HttpStatus.BAD_REQUEST);
-        } catch (CinemaException ex) {
-            Logger.getLogger(CinemaAPIController.class.getName()).log(Level.SEVERE, null, ex);
-            return new ResponseEntity<>("HTTP 403 Forbidden",HttpStatus.FORBIDDEN);
+            System.out.println(city);
+            String json = objectToJson(wthServices.getWeatherCity(city));
+            //obtener datos que se enviarán a través del API
+            return new ResponseEntity<>(json,HttpStatus.ACCEPTED);
+        } catch (Exception ex) {
+            Logger.getLogger(WeatherAPIController.class.getName()).log(Level.SEVERE, null, ex);
+            return new ResponseEntity<>("HTTP 404 Not Found",HttpStatus.NOT_FOUND);
         }
-    }*/
+    }
 
     private String objectToJson(Object a){
         String json = null;

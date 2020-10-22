@@ -1,6 +1,8 @@
+edu\eci\arsw\parcial\Excepcion\WeatherExcepcion.class
+edu\eci\arsw\parcial\services\http\HttpConnectionExample.class
+edu\eci\arsw\parcial\services\impl\WeaterServicesImpl.class
 edu\eci\arsw\parcial\controllers\WeatherAPIController.class
 edu\eci\arsw\parcial\services\WeatherServices.class
 edu\eci\arsw\parcial\WeatherAPIApplication.class
-edu\eci\arsw\parcial\CinemaWebSocketConfig.class
-edu\eci\arsw\parcial\controllers\STOMPMessagesHandler.class
 edu\eci\arsw\parcial\controllers\ResourceNotFoundException.class
+edu\eci\arsw\parcial\model\Weather.class
