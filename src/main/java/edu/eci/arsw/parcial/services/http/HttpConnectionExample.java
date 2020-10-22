@@ -36,12 +36,13 @@ public class HttpConnectionExample {
             in.close();
 
             // print result
-            //System.out.println(response.toString());
+            System.out.println(response);
             json = response.toString();
         } else {
             System.out.println("GET request not worked");
         }
         //System.out.println("GET DONE");
+        con.getContent();
         return json;
     }
     public static void main(String[] args) throws IOException {

@@ -35,8 +35,8 @@ import edu.eci.arsw.parcial.services.WeatherServices;
 public class WeatherAPIController {
 
 
-    //@Autowired
-    //private WeatherServices wthServices;
+    @Autowired
+    private WeatherServices wthServices;
 
     private ObjectMapper objectMapper = new ObjectMapper();
 
@@ -57,9 +57,9 @@ public class WeatherAPIController {
     public ResponseEntity<?> getWeather(@PathVariable String city){
         try {
             System.out.println(city);
-            //String json = objectToJson(wthServices.getWeatherCity(city));
+            String json = objectToJson(wthServices.getWeatherCity(city));
             //obtener datos que se enviarán a través del API
-            return new ResponseEntity<>("trabajando",HttpStatus.ACCEPTED);
+            return new ResponseEntity<>(json,HttpStatus.ACCEPTED);
         } catch (Exception ex) {
             Logger.getLogger(WeatherAPIController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>("HTTP 404 Not Found",HttpStatus.NOT_FOUND);

@@ -21,6 +21,7 @@ import edu.eci.arsw.parcial.model.Weather;
  *
  * @author Michael B
  */
+
 @Service
 public interface WeatherServices {
 

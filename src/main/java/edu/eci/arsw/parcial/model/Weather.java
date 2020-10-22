@@ -13,7 +13,10 @@ public class Weather {
         this.icon = icon;
     }
 
-    public int getId() {
+    public Weather() {
+	}
+
+	public int getId() {
         return id;
     }
 
